@@ -96,3 +96,8 @@ nav ul li a{
         height: 100%;
     }
 }
+
+#ExploreButton:hover{
+color: black;
+border-color: black;
+}
