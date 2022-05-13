@@ -1,0 +1,16 @@
+.icon {
+    width: 150px;
+}
+
+.SearchBar input[type=text]{
+
+    width: 500px;
+    height: 45px;
+    border-radius: 25px;
+    border: none;
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    padding: 5px;
+    
+}
