@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
+
 <body>
     <nav>
         <img src="icon2.png" class="icon">
@@ -19,7 +21,7 @@
         </ul>
     </nav>
     <div class="container">
-        <form class="form-group">
+        <form class="form-group" action="HotelForm.php" method="POST">
             <div id="form">
                 <h1 class="text-white text-center">Booking Now</h1>
 
@@ -27,26 +29,27 @@
 
                     <div id="content">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" id="input-group" placeholder="First name" name="Firstname" >
+                        <input type="text" id="input-group" placeholder="First name" name="Firstname" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-phone" aria-hidden="true"></i>
-                        <input type="number" id="input-group" placeholder="Phone number" name="Phonenumber" >
+                        <input type="number" id="input-group" placeholder="Phone number" name="Phonenumber" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <input type="date" id="dep-date" value="yyyy-mm-dd" placeholder="Departure Date" name="DepartureDate">
+                        <input type="date" id="dep-date" value="yyyy-mm-dd" placeholder="Departure Date"
+                            name="DepartureDate" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-users" aria-hidden="true"></i>
-                        <select id="input-group" style="background-color: black;">
+                        <select id="input-group" name="Guests" style="background-color: black;" required>
                             <option value="">No.of guests</option>
-                            <option value="">1-5</option>
-                            <option value="">6-10</option>
-                            <option value="">11-20</option>
+                            <option value="LessThan5">1-5</option>
+                            <option value="LessThan10">6-10</option>
+                            <option value="LessThan20">11-20</option>
                         </select>
                     </div>
 
@@ -56,30 +59,31 @@
 
                     <div id="content">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <input type="text" id="input-group" placeholder="Last name" name="Lastname" >
+                        <input type="text" id="input-group" placeholder="Last name" name="Lastname" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                        <input type="email" id="input-group" placeholder="Email" name="Email" >
+                        <input type="email" id="input-group" placeholder="Email" name="Email" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-calendar" aria-hidden="true"></i>
-                        <input type="date" id="arr-date" value="yyyy-mm-dd" placeholder="Arrival Date" name="ArrivalDate">
+                        <input type="date" id="arr-date" value="yyyy-mm-dd" placeholder="Arrival Date"
+                            name="ArrivalDate" required>
                     </div>
 
                     <div id="content">
                         <i class="fa fa-users" aria-hidden="true"></i>
-                        <select id="input-group" name="RoomType" style="background-color: black;">
+                        <select id="input-group" name="RoomType" style="background-color: black;" required>
                             <option value="">Room Type</option>
                             <option value="AC">AC</option>
-                            <option value="NONAC">Non-AC</option>
-                            <option value="SB">Single Bed</option>
-                            <option value="DB">Double Bed</option>
+                            <option value="NonAC">Non-AC</option>
+                            <option value="SingBed">Single Bed</option>
+                            <option value="DoubBed">Double Bed</option>
                         </select>
                     </div>
-            
+
                 </div>
 
                 <button type="submit" value="Submit" id="submit-btn">Book Now</button>
@@ -88,4 +92,5 @@
         </form>
     </div>
 </body>
+
 </html>
