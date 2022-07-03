@@ -31,7 +31,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
+} 
 
 nav .icon{
     width: 150px;
